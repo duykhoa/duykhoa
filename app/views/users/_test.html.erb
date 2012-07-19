@@ -1,0 +1,17 @@
+<!--<%=form_tag("/users", :method => "get") do%>
+<%=text_field_tag(:a)%>
+<%=check_box_tag(:b,"an ")%>
+<%=radio_button_tag(:c,"com")%>
+<%select(:a,:b,options_for_select([['1',1],['2',2]]))%>
+<%end%>-->
+
+
+
+<%= form_tag("/users",:method=>"get") do%>
+<%= select_date Date.today, :prefix => :start_date %>
+<!--<br>-->
+<!--<%=select_tag(:id,options_for_select([['lisbon',1],['bostom',2]]))%>-->
+<br>
+<%= date_select :person, :birth_date %>
+<%= submit_tag("sm") %>
+<% end %>
